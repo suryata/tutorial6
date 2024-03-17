@@ -6,3 +6,9 @@ Dalam mengerjakan Milestone 2: Returning HTML, saya mempelajari tentang bagaiman
 
 Ini adalah hasilnya:
 ![Commit 2 screen capture](/assets/images/commit2.jpeg)
+
+## Commit 3:
+Dalam mengerjakan Milestone 3: Validating Request and Selectively Responding, saya mempelajari pentingnya memvalidasi permintaan yang masuk ke server dan memberikan respons secara selektif. Saya menyadari bahwa tidak semua permintaan harus dijawab dengan konten yang sama; ada permintaan yang valid dan ada yang tidak. Oleh karena itu, saya mengimplementasikan logika untuk membedakan antara permintaan untuk halaman yang tersedia dengan halaman yang tidak tersedia. Dalam proses ini, saya melakukan refaktor pada kode untuk memastikan bahwa setiap bagian tanggung jawab fungsi lebih jelas dan terpisah, yang memungkinkan untuk perawatan dan pembacaan kode yang lebih baik di masa depan.
+
+Ini adalah hasilnya:
+![Commit 3 screen capture](/assets/images/commit3.jpeg)
