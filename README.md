@@ -12,3 +12,7 @@ Dalam mengerjakan Milestone 3: Validating Request and Selectively Responding, sa
 
 Ini adalah hasilnya:
 ![Commit 3 screen capture](/assets/images/commit3.jpeg)
+
+## Commit 4:
+Dalam mengerjakan Milestone 4: Simulation Slow Response, saya mempelajari tentang konsekuensi dari operasi yang memakan waktu di dalam server yang single-threaded. Melalui implementasi rute /sleep yang sengaja memberikan jeda dengan thread::sleep(Duration::from_secs(10)), saya dapat mengamati dampak langsung dari sebuah thread yang diblokir terhadap kemampuan server untuk menangani permintaan lain. Hal ini memberikan pemahaman mengenai pentingnya menggunakan asynchronous programming dan multithreading dalam pengembangan web server agar dapat menangani beban kerja yang tinggi dan tetap memberikan layanan yang responsif.
+
