@@ -16,3 +16,11 @@ Ini adalah hasilnya:
 ## Commit 4:
 Dalam mengerjakan Milestone 4: Simulation Slow Response, saya mempelajari tentang konsekuensi dari operasi yang memakan waktu di dalam server yang single-threaded. Melalui implementasi rute /sleep yang sengaja memberikan jeda dengan thread::sleep(Duration::from_secs(10)), saya dapat mengamati dampak langsung dari sebuah thread yang diblokir terhadap kemampuan server untuk menangani permintaan lain. Hal ini memberikan pemahaman mengenai pentingnya menggunakan asynchronous programming dan multithreading dalam pengembangan web server agar dapat menangani beban kerja yang tinggi dan tetap memberikan layanan yang responsif.
 
+## Commit 5:
+Dalam mengerjakan Milestone 5: Multithreaded Server, saya mempelajari berbagai konsep penting dalam pengembangan aplikasi web server yang efisien dan dapat menangani banyak request secara simultan. Salah satu pelajaran yang saya peroleh adalah tentang bagaimana memanfaatkan multithreading untuk meningkatkan performa server. Saya memahami bahwa dengan menggunakan ThreadPool, server dapat mengalokasikan sejumlah thread untuk menangani request, yang memungkinkan server untuk melayani banyak pengguna secara bersamaan tanpa harus membuka dan menutup thread untuk setiap request baru, yang mana dapat sangat membebani sumber daya sistem.
+
+Saya juga belajar tentang pentingnya mengelola concurrency dengan benar untuk menghindari race conditions, deadlocks, dan masalah lain yang bisa muncul dalam aplikasi multithreaded. Penggunaan Arc (Atomic Reference Counting) dan Mutex (Mutual Exclusion) di Rust memberikan cara yang aman dan efisien untuk berbagi state antar thread dengan menjamin bahwa hanya satu thread yang dapat mengakses data pada satu waktu, menjaga integritas data.
+Ini adalah hasilnya:
+![Commit 5 screen capture](/assets/images/commit5.jpeg)
+
+## Commit Bonus:
