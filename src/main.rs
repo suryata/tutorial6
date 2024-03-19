@@ -1,4 +1,4 @@
-use hello::ThreadPool;
+use hello::{ThreadPool, PoolCreationError}; 
 use std::{
     fs,
     io::{prelude::*, BufReader},
@@ -9,7 +9,15 @@ use std::{
 
 fn main() {
     let listener = TcpListener::bind("127.0.0.1:7878").unwrap();
-    let pool = ThreadPool::new(4); 
+    
+    // Menggunakan `build` dan menangani hasilnya
+    let pool = match ThreadPool::build(4) {
+        Ok(pool) => pool,
+        Err(PoolCreationError::InvalidSize) => {
+            eprintln!("Failed to create a thread pool: size is invalid.");
+            return;
+        },
+    };
 
     for stream in listener.incoming() {
         let stream = match stream {
@@ -46,7 +54,7 @@ fn handle_connection(mut stream: TcpStream) {
 
     let contents = match fs::read_to_string(filename) {
         Ok(content) => content,
-        Err(_) => return, 
+        Err(_) => return,
     };
     let length = contents.len();
 

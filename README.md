@@ -24,3 +24,6 @@ Ini adalah hasilnya:
 ![Commit 5 screen capture](/assets/images/commit5.jpeg)
 
 ## Commit Bonus:
+Dalam mengerjakan Milestone Bonus: Try to create a function build as a replacement to new, saya mempelajari pentingnya desain API yang fleksibel dan robust dalam pengembangan perangkat lunak. Dengan mengimplementasikan fungsi build memberikan insight tentang bagaimana sebuah fungsi konstruktor dapat dirancang untuk memberikan feedback yang jelas dan berguna kepada pengguna library atau aplikasi, terutama dalam hal pengelolaan error.
+
+Saya menyadari bahwa dengan menggunakan Result sebagai nilai kembalian dari build, aplikasi yang menggunakan ThreadPool dapat dengan mudah menangani kondisi error secara lebih elegan daripada langsung panic. Ini sangat berguna dalam konteks produksi di mana stabilitas dan keandalan menjadi prioritas. Dengan demikian, konsumen library memiliki kontrol penuh atas bagaimana mereka ingin menanggapi kesalahan saat inisialisasi ThreadPool, apakah itu mencatat error, menghentikan eksekusi, atau mungkin fallback ke strategi lain.
